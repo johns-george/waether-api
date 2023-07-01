@@ -18,32 +18,30 @@ function App() {
   })
   return (
    
-    <div className="weatherApp">
-      <div className="searchbar">
-       <div className="searchbar2"> <h1>Enter The City</h1></div>
-        <div className="searchbarinput"><input className='searchbarinput2' onKeyDown={weatherdetails} type="search" value={location} onChange={(e)=>{
+    <div className="bg-[url('/Users/poovathingal/Desktop/weatherapi/src/wallpaperflare.com_wallpaper.jpg')] bg-cover h-screen">
+       <div className="flex justify-center pb-4 pt-12"> <h1 className='text-5xl text-white pt-10'>Enter The City</h1></div>
+        <div className="flex justify-center ml-6"><input className='w-60 rounded-3xl h-12 text-3xl pl-4 capitalize' onKeyDown={weatherdetails} type="search" value={location} onChange={(e)=>{
           setLocation(e.target.value)
         }} / >
        <IconSearchengin onClick={weatherdetails2}></IconSearchengin>
-</div>
-</div>
+       </div>
       {data.main!=null && 
-     <div className='bottom'>
-     <div className="weatherdetails">
-        <h1 className='cityName'>{data.name}</h1>
-        {data.main?<h1 className='temp'>{Math.floor(data.main.temp-273)}°C</h1>:null}
+     <div className=''>
+     <div className="flex justify-center text-6xl text-white pt-20">
+        <h1 className=''>{data.name}</h1></div>
+      <div className='flex justify-center text-8xl text-white pt-4'>  {data.main?<h1 className=''>{Math.floor(data.main.temp-273)}°C</h1>:null}
       </div>
-      <div className="additional">
-        <div className="humidity">
-        {data.main?<p>{data.main.humidity}%</p>:null}
+      <div className="flex text-white text-5xl px- justify-around pt-28 ">
+        <div className="">
+        {data.main?<p className='text-center'>{data.main.humidity}%</p>:null}
         <h1>Humidity</h1>
         </div>
-        <div className="sky">
+        <div className="">
           <h1>Feels Like</h1>
-          {data.main?<p className='feeling'>{data.weather[0].main}</p>:null}
+          {data.main?<p className='text-center'>{data.weather[0].main}</p>:null}
         </div>
-        <div className="windspeed">
-         {data.main?<p>{data.wind.speed}MPH</p>:null}
+        <div className="">
+         {data.main?<p className='text-center'>{data.wind.speed}MPH</p>:null}
         <h1>Wind speed</h1>
         </div>
       </div>
