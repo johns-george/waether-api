@@ -39,7 +39,7 @@ function App() {
         <h1 className=''>{data.name}</h1></div>
       <div className='flex justify-center text-6xl lg:text-8xl text-white pt-4'>  {data.main?<h1 className=''>{Math.floor(data.main.temp-273)}°C</h1>:null}
       </div>
-      <div className="flex text-white text-3xl lg:text-5xl px- justify-around pt-28 ">
+      <div className="flex text-white xs:text-2xl lg:text-5xl px- justify-around pt-28 ">
         <div className="">
         {data.main?<p className='text-center'>{data.main.humidity}%</p>:null}
         <h1>Humidity</h1>
